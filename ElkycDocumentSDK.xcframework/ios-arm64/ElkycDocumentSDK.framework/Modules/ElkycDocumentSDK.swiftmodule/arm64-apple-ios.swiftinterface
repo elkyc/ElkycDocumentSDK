@@ -1,0 +1,210 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ElkycDocumentSDK
+import DocumentReader
+import ElkycCoreSDK
+@_exported import ElkycDocumentSDK
+import Foundation
+import Swift
+import UIKit
+import Vision
+@_hasMissingDesignatedInitializers public class DocumentReader {
+  public static let shared: ElkycDocumentSDK.DocumentReader
+  public var scenarios: [DocumentReader.Scenario] {
+    get
+  }
+  public func loadDatabase(progressHandler: ((Foundation.Progress) -> Swift.Void)?, completion: @escaping ((Swift.Bool, Swift.Error?) -> Swift.Void))
+  public func initialize(with licenseData: Foundation.Data, completion: @escaping ((Swift.Bool, Swift.Error?) -> Swift.Void))
+  public func deinitialize()
+  @objc deinit
+}
+public class CreditCardScan : ElkycCoreSDK.ElkycStep {
+  final public let stepId: ElkycCoreSDK.ElkycStepId
+  public init(documentMask: ElkycDocumentSDK.DocumentMask = .creditCard, shouldParseImage: Swift.Bool = false)
+  public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.CreditCard, Swift.Error>) -> Swift.Void))
+  public typealias Output = ElkycDocumentSDK.CreditCard
+  @objc deinit
+}
+public class BarcodeScan : ElkycCoreSDK.ElkycStep {
+  public struct Response {
+    public let image: UIKit.UIImage?
+    public let fields: [Swift.Int : Swift.String]
+  }
+  final public let stepId: ElkycCoreSDK.ElkycStepId
+  public init(documentMask: ElkycDocumentSDK.DocumentMask = .empty, shouldParseImage: Swift.Bool = false)
+  public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.BarcodeScan.Response, Swift.Error>) -> Swift.Void))
+  public typealias Output = ElkycDocumentSDK.BarcodeScan.Response
+  @objc deinit
+}
+public struct DocumentResult : Swift.Encodable {
+  public enum DocumentStepType : Swift.String, Swift.Encodable {
+    case document
+    case barCode
+    case creditCard
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let elapsedTime: Swift.Int
+  public let elapsedTimeRFID: Swift.Int
+  public let overallResult: Swift.Int
+  public let morePagesAvailable: Swift.Int
+  public let types: [ElkycDocumentSDK.DocType]
+  public let graphics: [ElkycDocumentSDK.DocumentGraphic]
+  public let texts: [ElkycDocumentSDK.DocumentText]
+  public let stepType: ElkycDocumentSDK.DocumentResult.DocumentStepType
+  public let hasRFID: Swift.Bool
+  public func mainDocumentImage() -> UIKit.UIImage?
+  public func mainDocumentImageString() -> Swift.String
+  public func portrait() -> UIKit.UIImage?
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public class RfidDocumentScan : ElkycCoreSDK.ElkycStep {
+  final public let stepId: ElkycCoreSDK.ElkycStepId
+  final public let opticalDocResult: ElkycDocumentSDK.DocumentResult
+  public init(opticalDocResult: ElkycDocumentSDK.DocumentResult)
+  public static func isAvailable() -> Swift.Bool
+  public func setDocumentTypes(_ types: [DocumentReader.DiDocType]) -> ElkycDocumentSDK.RfidDocumentScan
+  public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.RfidDocumentScan
+  public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
+  public typealias Output = ElkycDocumentSDK.DocumentResult
+  @objc deinit
+}
+public struct DocumentText : Swift.Encodable {
+  public let status: Swift.Int
+  public let fieldType: Swift.Int
+  public let lcid: Swift.Int
+  public let values: [ElkycDocumentSDK.DocumentTextValue]
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public class SelfieCapture : ElkycCoreSDK.ElkycStep {
+  final public let stepId: ElkycCoreSDK.ElkycStepId
+  public init()
+  public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<UIKit.UIImage, Swift.Error>) -> Swift.Void))
+  public typealias Output = UIKit.UIImage
+  @objc deinit
+}
+public class DocumentScan : ElkycCoreSDK.ElkycStep {
+  final public let stepId: ElkycCoreSDK.ElkycStepId
+  public init(documentMask: ElkycDocumentSDK.DocumentMask = .empty)
+  public func setDocumentTypes(_ types: [DocumentReader.DiDocType]) -> ElkycDocumentSDK.DocumentScan
+  public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.DocumentScan
+  public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
+  public typealias Output = ElkycDocumentSDK.DocumentResult
+  @objc deinit
+}
+public class DocumentImageScan : ElkycCoreSDK.ElkycStep {
+  final public let stepId: ElkycCoreSDK.ElkycStepId
+  public init(image: UIKit.UIImage)
+  public func setDocumentTypes(_ types: [DocumentReader.DiDocType]) -> ElkycDocumentSDK.DocumentImageScan
+  public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.DocumentImageScan
+  public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
+  public typealias Output = ElkycDocumentSDK.DocumentResult
+  @objc deinit
+}
+public class CaptureDocumentScan : ElkycCoreSDK.ElkycStep {
+  public enum DocumentType {
+    case utility
+    case specific
+    public static func == (a: ElkycDocumentSDK.CaptureDocumentScan.DocumentType, b: ElkycDocumentSDK.CaptureDocumentScan.DocumentType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public struct Response : Swift.Encodable {
+    public let image: Swift.String?
+    public let originalImage: UIKit.UIImage?
+    public init(image: UIKit.UIImage)
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  final public let stepId: ElkycCoreSDK.ElkycStepId
+  final public let documentType: ElkycDocumentSDK.CaptureDocumentScan.DocumentType
+  public init(documentMask: ElkycDocumentSDK.DocumentMask = .empty, documentType: ElkycDocumentSDK.CaptureDocumentScan.DocumentType)
+  public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.CaptureDocumentScan.Response, Swift.Error>) -> Swift.Void))
+  public typealias Output = ElkycDocumentSDK.CaptureDocumentScan.Response
+  @objc deinit
+}
+public enum DocumentMask : Swift.Equatable {
+  case empty
+  case worldwide
+  case worldwideBack
+  case ukrainianWorld
+  case ukrainianId
+  case ukrainianPassport
+  case ukrainianPassportSecond
+  case ukrainianPassportThird
+  case ukrainianPassportFourth
+  case oldPassportFirst
+  case taxNumberUKR
+  case creditCard
+  case custom(UIKit.UIImage)
+  public static func == (a: ElkycDocumentSDK.DocumentMask, b: ElkycDocumentSDK.DocumentMask) -> Swift.Bool
+}
+public struct DocumentGraphic : Swift.Encodable {
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public class InnDocumentScan : ElkycCoreSDK.ElkycStep {
+  public struct Response {
+    public let image: Swift.String?
+    public let originalImage: UIKit.UIImage?
+    public let number: Swift.String?
+  }
+  final public let stepId: ElkycCoreSDK.ElkycStepId
+  public init(innImage: UIKit.UIImage? = nil)
+  public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.InnDocumentScan.Response, Swift.Error>) -> Swift.Void))
+  public typealias Output = ElkycDocumentSDK.InnDocumentScan.Response
+  @objc deinit
+}
+public class InnConfirm : ElkycCoreSDK.ElkycStep {
+  final public let stepId: ElkycCoreSDK.ElkycStepId
+  public init(config: ElkycDocumentSDK.InnConfirm.Config = Config(), scanResponse: ElkycDocumentSDK.InnDocumentScan.Response)
+  public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.InnDocumentScan.Response, Swift.Error>) -> Swift.Void))
+  public typealias Output = ElkycDocumentSDK.InnDocumentScan.Response
+  @objc deinit
+}
+extension InnConfirm {
+  public struct Config {
+    public var title: Swift.String
+    public var empty_title: Swift.String
+    public var mainBtnBackgroundColor: UIKit.UIColor
+    public var mainBtnTintColor: UIKit.UIColor
+    public var mainBtnTitle: Swift.String
+    public init()
+  }
+}
+public struct DocType : Swift.Encodable {
+  public let name: Swift.String?
+  public let pageIndex: Swift.Int
+  public let hasMRZ: Swift.Bool
+  public let icao: Swift.String?
+  public let type: Swift.Int
+  public let year: Swift.String?
+  public let format: Swift.Int
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct CreditCard {
+}
+public struct DocumentTextValue : Swift.Encodable {
+  public let pageIndex: Swift.Int
+  public let probability: Swift.Int
+  public let value: Swift.String
+  public let validity: Swift.Int
+  public let sourceType: Swift.Int
+  public let comparison: [Swift.Int : Swift.Int]
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public class UkrPassportScan : ElkycCoreSDK.ElkycStep {
+  final public let stepId: ElkycCoreSDK.ElkycStepId
+  public init(documentMask: ElkycDocumentSDK.DocumentMask = .empty)
+  public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
+  public typealias Output = ElkycDocumentSDK.DocumentResult
+  @objc deinit
+}
+extension ElkycDocumentSDK.DocumentResult.DocumentStepType : Swift.Equatable {}
+extension ElkycDocumentSDK.DocumentResult.DocumentStepType : Swift.Hashable {}
+extension ElkycDocumentSDK.DocumentResult.DocumentStepType : Swift.RawRepresentable {}
+extension ElkycDocumentSDK.CaptureDocumentScan.DocumentType : Swift.Equatable {}
+extension ElkycDocumentSDK.CaptureDocumentScan.DocumentType : Swift.Hashable {}

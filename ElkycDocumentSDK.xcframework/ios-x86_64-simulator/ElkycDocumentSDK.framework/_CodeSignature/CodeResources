@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		fP9nOnXrB6Q3H4UMvlDtOEQ6Y1s=
+		96y/UIT6PzMZTrv4lWCQtf7/nqg=
 		</data>
 		<key>Headers/ElkycDocumentSDK-Swift.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Inn.storyboardc/GLm-lS-9SV-view-KSi-OS-CRf.nib</key>
 		<data>
-		RTT3TAxcaZkMccsqCF3uPg/w3Pg=
+		RzrfcuDwTsYEZFtJVLlIlvW6Lzg=
 		</data>
 		<key>Inn.storyboardc/Info.plist</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Inn.storyboardc/InnConfirmViewController.nib</key>
 		<data>
-		0al3Fokxpx9iSJBtG6xe+q0pFPg=
+		8hOrhqeCKFgqcGLpYGU7Pt0JsLY=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Rfid.storyboardc/BC3-1g-70L-view-e4r-UL-G77.nib</key>
 		<data>
-		fx9iNOt0C5weERXJqby4eJdwmTc=
+		o9TBxVNEUUpLYHntV1mYAxGWibY=
 		</data>
 		<key>Rfid.storyboardc/Info.plist</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Rfid.storyboardc/RfidViewController.nib</key>
 		<data>
-		Ml0HvgKcOk9vDWwC+3dl7rh0daE=
+		P9bZ9WVr7jk9rnId7F4s+qma3qA=
 		</data>
 		<key>ru.lproj/Localizable.strings</key>
 		<dict>
@@ -88,7 +88,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rBQyO+vMcQ6PFva/X4/hsmld+NvtQ1Yf3KzsEzAW3UA=
+			9fJmCPE3/Bp5pNIyJ3FhwmJui0Wr41fN38KgCT9nVxc=
 			</data>
 		</dict>
 		<key>Headers/ElkycDocumentSDK-Swift.h</key>
@@ -109,7 +109,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iYYowhI4J6Phrz1v3a3bijMz00gOoOTu0hJUhqOthtc=
+			X2cOy4byTwrDreniOeIVmbE5AHzPyEncsJAeaQ9o+QY=
 			</data>
 		</dict>
 		<key>Inn.storyboardc/Info.plist</key>
@@ -123,7 +123,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7CmhbE1RiRTPXL300A344THrJNyGW0vI78umQ36XmdY=
+			983yyBc4X+I+C1Gfv1i/o4GnrW0uGxDfpqXeMEi3l9M=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -179,7 +179,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XHdO2JVrLmstsqasMY1mROyam2WTvPuCyxxHo2q0aL4=
+			OqJupWltZf71tqJzZz84cx64jLuwcq2/nTJA7kwO5v4=
 			</data>
 		</dict>
 		<key>Rfid.storyboardc/Info.plist</key>
@@ -193,7 +193,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kCWaioGJte16J+hCXtUTSbfbBBvoIAwLJx+CbuWbOWs=
+			wEuF38Y/rzqBTw8MushRPgArOg+SYdw5us8qdyV06mY=
 			</data>
 		</dict>
 		<key>ru.lproj/Localizable.strings</key>

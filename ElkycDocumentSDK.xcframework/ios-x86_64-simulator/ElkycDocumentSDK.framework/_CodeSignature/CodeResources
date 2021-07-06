@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		96y/UIT6PzMZTrv4lWCQtf7/nqg=
+		KXS1WD9FjLazkyFgHgAWfxUQMBc=
 		</data>
 		<key>Headers/ElkycDocumentSDK-Swift.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		rHqK+lyj5ju82f5pmOegz57eaG0=
+		2juVQXMOS27uwk5B3LPaGKGuwAA=
 		</data>
 		<key>Inn.storyboardc/GLm-lS-9SV-view-KSi-OS-CRf.nib</key>
 		<data>
-		RzrfcuDwTsYEZFtJVLlIlvW6Lzg=
+		BsxUxAOhdwobh7W1H9TdnNvNpXk=
 		</data>
 		<key>Inn.storyboardc/Info.plist</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Inn.storyboardc/InnConfirmViewController.nib</key>
 		<data>
-		8hOrhqeCKFgqcGLpYGU7Pt0JsLY=
+		su4HEfZzTfE/kTTsrk6Iso7gx08=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		dPDypPP/Cqd/UNj6Ed6vC6WZioE=
+		mAPJGQcPpMO8+RmJb5ahdtcESYE=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		vo5Eml+LLT+b+DzWkkLveoTGCbs=
+		5UXk+kRFjvUfkvPKkrXZE8XWQSY=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		dPDypPP/Cqd/UNj6Ed6vC6WZioE=
+		mAPJGQcPpMO8+RmJb5ahdtcESYE=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		vo5Eml+LLT+b+DzWkkLveoTGCbs=
+		5UXk+kRFjvUfkvPKkrXZE8XWQSY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Rfid.storyboardc/BC3-1g-70L-view-e4r-UL-G77.nib</key>
 		<data>
-		o9TBxVNEUUpLYHntV1mYAxGWibY=
+		+AfBoyB9e6Gi8o/Yd6DbhNnFYfA=
 		</data>
 		<key>Rfid.storyboardc/Info.plist</key>
 		<data>
@@ -70,13 +70,22 @@
 		</data>
 		<key>Rfid.storyboardc/RfidViewController.nib</key>
 		<data>
-		P9bZ9WVr7jk9rnId7F4s+qma3qA=
+		dLxj1ZaDbOYASJdg2ON9yL1L8Pg=
 		</data>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qKmacXl7hN49n61GbIeE3GKPvis=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>ru.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			K7Lj9A2T526TlFhxqNFyoUozDX8=
+			R1yb0EydY/r1G8czy45+T97tK2o=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -88,7 +97,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9fJmCPE3/Bp5pNIyJ3FhwmJui0Wr41fN38KgCT9nVxc=
+			S7PApq2ItqkaY0ZDUogBff1o1ifE7hnr+lStt0wthE8=
 			</data>
 		</dict>
 		<key>Headers/ElkycDocumentSDK-Swift.h</key>
@@ -109,7 +118,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X2cOy4byTwrDreniOeIVmbE5AHzPyEncsJAeaQ9o+QY=
+			l8+R63UuN/o3ghhed3+ZtRyTOPaf83wal2K87cfJLbo=
 			</data>
 		</dict>
 		<key>Inn.storyboardc/Info.plist</key>
@@ -123,7 +132,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			983yyBc4X+I+C1Gfv1i/o4GnrW0uGxDfpqXeMEi3l9M=
+			zs7PoQz+UHnYj4w0onuGzsR3rt6HExBsvtJBQRs19Tw=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -137,14 +146,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qu9+3WgbAYW9uBj3vKnO2GBgvGekQYpWdxgfhRjCQh4=
+			Sb3w78mUOh3mK3M1YGuyKVTPvME/ygcuUutikQlGrsA=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JJYljrnLaIogkyqs8FzD7jTPUc36XrWKktN+aMBQbkk=
+			PESrcYEnT++1e6Ujwftubsmn04Vou4FTWGhSe8GZiOM=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64.swiftdoc</key>
@@ -158,14 +167,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qu9+3WgbAYW9uBj3vKnO2GBgvGekQYpWdxgfhRjCQh4=
+			Sb3w78mUOh3mK3M1YGuyKVTPvME/ygcuUutikQlGrsA=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JJYljrnLaIogkyqs8FzD7jTPUc36XrWKktN+aMBQbkk=
+			PESrcYEnT++1e6Ujwftubsmn04Vou4FTWGhSe8GZiOM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -179,7 +188,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OqJupWltZf71tqJzZz84cx64jLuwcq2/nTJA7kwO5v4=
+			3sX4W0g9Qbc/TEvNhqsrA94sOAp5Bnss9V+TMR+LDgI=
 			</data>
 		</dict>
 		<key>Rfid.storyboardc/Info.plist</key>
@@ -193,14 +202,23 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wEuF38Y/rzqBTw8MushRPgArOg+SYdw5us8qdyV06mY=
+			WY5y/QdGjRS7MnBK/rdIUxPmbG1oOo+HDMdOwycmZDo=
 			</data>
+		</dict>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ExVNDe5zrWGsHeDrCV6emnmefOTy6iQyRTnUaPMz3eY=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>ru.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fL7aM5VhiT+BvK7llkR463a7lAyNAIi4A4fC60ue7Ng=
+			cVvqKRJR1VaJXV802XBjTgX3N8b5q9pz4rcGRXm0/c8=
 			</data>
 			<key>optional</key>
 			<true/>

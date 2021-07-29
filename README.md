@@ -62,6 +62,15 @@ Don't forget that framework depends on [ElkycCoreSDK](https://github.com/elkyc/E
 
 The whole process is going synchronously from the first to the last step. During the process, data will be sent to our or your backend. The process will stop if **any** of the steps will return an error.
 
+Before starting using library you should always check for database update. Use **DocumentReader** class for this.
+```swift
+DocumentReader.loadDatabase { progress in
+    print("\(Float(progress.fractionCompleted))")
+} completion: { _, _ in
+
+}
+```
+
 ## DocumentResult
 DocumentResult is a struct returned by DocumentImageScan, DocumentScan, UkrPassportScan, CaptureWithConfirm and RfidDocumentScan steps. This structure contains all information regarding document scan.
 

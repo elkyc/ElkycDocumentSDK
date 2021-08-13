@@ -9,19 +9,14 @@ import Swift
 import UIKit
 import Vision
 @_hasMissingDesignatedInitializers public class DocumentReader {
-  public static let shared: ElkycDocumentSDK.DocumentReader
-  public var scenarios: [DocumentReader.Scenario] {
-    get
-  }
-  public func loadDatabase(progressHandler: ((Foundation.Progress) -> Swift.Void)?, completion: @escaping ((Swift.Bool, Swift.Error?) -> Swift.Void))
-  public func initialize(with licenseData: Foundation.Data, completion: @escaping ((Swift.Bool, Swift.Error?) -> Swift.Void))
-  public func deinitialize()
+  public static func loadDatabase(progressHandler: ((Foundation.Progress) -> Swift.Void)?, completion: @escaping ((Swift.Bool, Swift.Error?) -> Swift.Void))
   @objc deinit
 }
 public class CreditCardScan : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
   public init(documentMask: ElkycDocumentSDK.DocumentMask = .creditCard, shouldParseImage: Swift.Bool = false)
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.CreditCard, Swift.Error>) -> Swift.Void))
+  public func startStep(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.CreditCard, Swift.Error>) -> Swift.Void))
   public typealias Output = ElkycDocumentSDK.CreditCard
   @objc deinit
 }
@@ -33,6 +28,7 @@ public class BarcodeScan : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
   public init(documentMask: ElkycDocumentSDK.DocumentMask = .empty, shouldParseImage: Swift.Bool = false)
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.BarcodeScan.Response, Swift.Error>) -> Swift.Void))
+  public func startStep(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.BarcodeScan.Response, Swift.Error>) -> Swift.Void))
   public typealias Output = ElkycDocumentSDK.BarcodeScan.Response
   @objc deinit
 }
@@ -83,6 +79,7 @@ public class RfidDocumentScan : ElkycCoreSDK.ElkycStep {
   public func setDocumentTypes(_ types: [DocumentReader.DiDocType]) -> ElkycDocumentSDK.RfidDocumentScan
   public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.RfidDocumentScan
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
+  public func startStep(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
   public typealias Output = ElkycDocumentSDK.DocumentResult
   @objc deinit
 }
@@ -105,7 +102,7 @@ public struct DocumentText : Swift.Encodable {
 public class CaptureWithConfirm : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
   public init(documentMask: ElkycDocumentSDK.DocumentMask, documentType: ElkycDocumentSDK.CaptureDocumentType, scanDocument: Swift.Bool, confirmConfig: ElkycCoreSDK.DocumentConfirm.Config = DocumentConfirm.Config())
-  public init(docImage: UIKit.UIImage? = nil, scanDocument: Swift.Bool, confirmConfig: ElkycCoreSDK.DocumentConfirm.Config = DocumentConfirm.Config())
+  public init(docImage: UIKit.UIImage?, scanDocument: Swift.Bool, confirmConfig: ElkycCoreSDK.DocumentConfirm.Config = DocumentConfirm.Config())
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.CaptureWithConfirm.StepResult, Swift.Error>) -> Swift.Void))
   public typealias Output = ElkycDocumentSDK.CaptureWithConfirm.StepResult
   @objc deinit
@@ -123,6 +120,7 @@ public class DocumentScan : ElkycCoreSDK.ElkycStep {
   public func setDocumentTypes(_ types: [DocumentReader.DiDocType]) -> ElkycDocumentSDK.DocumentScan
   public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.DocumentScan
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
+  public func startStep(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
   public typealias Output = ElkycDocumentSDK.DocumentResult
   @objc deinit
 }
@@ -132,6 +130,7 @@ public class DocumentScan : ElkycCoreSDK.ElkycStep {
   public func setDocumentTypes(_ types: [DocumentReader.DiDocType]) -> ElkycDocumentSDK.DocumentImageScan
   public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.DocumentImageScan
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
+  public func startStep(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
   public typealias Output = ElkycDocumentSDK.DocumentResult
   @objc deinit
 }
@@ -233,8 +232,9 @@ public struct DocumentTextValue : Swift.Encodable {
 }
 public class UkrPassportScan : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
-  public init(documentMask: ElkycDocumentSDK.DocumentMask = .empty)
+  public init()
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
+  public func startStep(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
   public typealias Output = ElkycDocumentSDK.DocumentResult
   @objc deinit
 }

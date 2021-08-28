@@ -33,6 +33,41 @@ ElkycDocumentSDK does not have any components but it is dependent on [ElkycCoreS
 - Xcode 11+
 - Swift 5.1+
 
+# Permissions
+## Camera
+
+This is achieved easily by adding the NSCameraUsageDescription key to the Info.plist along with usage description string. This usage string is displayed when the user is asked to allow access, so localization may be desired depending on your user base.
+
+## RFID
+
+Add the NFCReaderUsageDescription key as a string item to the Info.plist file.
+
+Also, com.apple.developer.nfc.readersession.iso7816.select-identifiers has to be added and a list of application identifiers has to be declared there which the app has to able to read according to ISO7816.
+
+To access a particular function of the electronic document or to a file in its memory, it is required to select the corresponding application first.
+Identifiers of all supported by Document Reader SDK standard applications are given below.
+
+- A0000002471001 corresponds to the ePassport application;
+- E80704007F00070302 corresponds to the eID application;
+- A000000167455349474E corresponds to the eSign application;
+- A0000002480100 correspond to the eDL application;
+- A0000002480200 correspond to the eDL application;
+- A0000002480300 correspond to the eDL application;
+- A00000045645444C2D3031 corresponds to the eDL application (Europe).
+
+```
+<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+	<array>
+		<string>A0000002471001</string>
+		<string>E80704007F00070302</string>
+		<string>A000000167455349474E</string>
+		<string>A0000002480100</string>
+		<string>A0000002480200</string>
+		<string>A0000002480300</string>
+		<string>A00000045645444C2D3031</string>
+	</array>
+```
+
 # Installation
 ## CocoaPods
 
@@ -62,6 +97,15 @@ Don't forget that framework depends on [ElkycCoreSDK](https://github.com/elkyc/E
 
 The whole process is going synchronously from the first to the last step. During the process, data will be sent to our or your backend. The process will stop if **any** of the steps will return an error.
 
+Before starting using library you should always check for database update. Use **DocumentReader** class for this.
+```swift
+DocumentReader.loadDatabase { progress in
+    print("\(Float(progress.fractionCompleted))")
+} completion: { _, _ in
+
+}
+```
+
 ## DocumentResult
 DocumentResult is a struct returned by DocumentImageScan, DocumentScan, UkrPassportScan, CaptureWithConfirm and RfidDocumentScan steps. This structure contains all information regarding document scan.
 
@@ -87,13 +131,89 @@ public struct DocumentResult: Encodable {
 ```
 - elapsedTime - time passed during the scan
 - elapsedTimeRFID - time passed during RFID scan
-- overallResult - validation result
+- overallResult - validation result, [CheckResult](https://github.com/elkyc/ElkycDocumentSDK/blob/main/Enums/CheckResult.swift)
 - morePagesAvailable - if document has more pages to scan
 - types - information about document type
 - graphics - information about images in the document or at RFID
 - texts - information about text scanned visually, from MRZ or RFID
 - stepType - document type, mostly used internally
 - hasRFID - boolean indicated if this document has rfid or not
+
+### DocType
+DocType struct represents a document type.
+
+```swift
+public struct DocType: Encodable {
+    public let name: String?
+    public let pageIndex: Int
+    public let hasMRZ: Bool
+    public let icao: String?
+    public let type: Int
+    public let year: String?
+    public let format: Int
+}
+```
+- name - document name
+- pageIndex - an index of the document page whence results are received
+- hasMRZ - flag for MRZ presence on a document
+- icao - document issuing country ICAO code
+- type - document type, [DocType](https://github.com/elkyc/ElkycDocumentSDK/blob/main/Enums/DiDocType.swift)
+- year - document issue year
+- format - document format, [DocFormat](https://github.com/elkyc/ElkycDocumentSDK/blob/main/Enums/DocFormat.swift)
+
+### DocumentGraphic
+DocumentGraphic struct represents a document image.
+
+```swift
+public struct DocumentGraphic: Encodable {
+    public let fieldType: Int
+    public let sourceType: Int
+    public let pageIndex: Int
+    public let image: String
+    public let originalImage: UIImage
+}
+```
+- fieldType - graphic field logical type, [GraphicFieldType](https://github.com/elkyc/ElkycDocumentSDK/blob/main/Enums/GraphicFieldType.swift)
+- sourceType - identifies zone whence data is extracted, [ResultType](https://github.com/elkyc/ElkycDocumentSDK/blob/main/Enums/ResultType.swift)
+- pageIndex - an index of the document page whence the graphic field is extracted
+- image - an base64 encoded image
+- originalImage - an image
+
+### DocumentText
+DocumentText struct represents a document text field.
+
+```swift
+public struct DocumentText: Encodable {
+    public let status: Int
+    public let fieldType: Int
+    public let lcid: Int
+    public let values: [DocumentTextValue]
+}
+```
+- status - textual field check result, [CheckResult](https://github.com/elkyc/ElkycDocumentSDK/blob/main/Enums/CheckResult.swift)
+- fieldType - textual field logical type, [FieldType](https://github.com/elkyc/ElkycDocumentSDK/blob/main/Enums/FieldType.swift)
+- lcid - ID of language-culture to differentiate one field of the same type from another (for example Belarus Passport Page # 31 – Belarusian and Russian fields of the same type), [Lcid](https://github.com/elkyc/ElkycDocumentSDK/blob/main/Enums/Lcid.swift)
+- values - an array of values
+
+#### DocumentTextValue
+DocumentTextValue struсt represents a document text value
+
+```swift
+public struct DocumentTextValue: Encodable {
+    public let pageIndex: Int
+    public let probability: Int
+    public let value: String
+    public let validity: Int
+    public let sourceType: Int
+    public let comparison: [Int: Int]
+}
+```
+- pageIndex - an index of the document page whence the textual field is extracted
+- probability - textual field recognition probability (0 - 100, %)
+- value - a value
+- validity - verification result, [FieldVerificationResult](https://github.com/elkyc/ElkycDocumentSDK/blob/main/Enums/FieldVerificationResult.swift)
+- sourceType - identifies zone whence data is extracted, [ResultType](https://github.com/elkyc/ElkycDocumentSDK/blob/main/Enums/ResultType.swift)
+- comparison - a comparison result of a textual field values where the key is one of [ResultType](https://github.com/elkyc/ElkycDocumentSDK/blob/main/Enums/ResultType.swift) values and the value is one of [FieldVerificationResult](https://github.com/elkyc/ElkycDocumentSDK/blob/main/Enums/FieldVerificationResult.swift) values
 
 ## Predefined steps
 In this section, I will describe all available steps in the current framework, their configs and will show how they look like. 
@@ -107,6 +227,7 @@ Use this step if you want to scan any document image.
 
 - image: UIImage - document image
 - validateResponse: Bool - If you set this property to true then step will validate DocumentResult, it will check if at least one document type is available
+- startNewSession: Bool - if you are scaning the same document, for example the back page of ID card, please set this to true
 
 **Output:**
 
@@ -118,6 +239,7 @@ Use this step if you want to visually scan a document.
 **Input:**
 
 - documentMask: DocumentMask - you can set a mask for a scan process. We have a set of predefined masks as well you can set the custom one.
+- startNewSession: Bool - if you are scaning the same document, for example the back page of ID card, please set this to true
 
 **Output:**
 
@@ -137,9 +259,10 @@ Use this step if you want to visually take a picture of a document and confim it
 
 - documentMask: DocumentMask - you can set a mask for a scan process. We have a set of predefined masks as well you can set the custom one.
 - documentType: CaptureDocumentType - you can set a type of the document, mostly used internally
-- scanDocument: Bool - if step should try to scan a document with DocumentImageScan step
+- scanDocument: Bool - set to true if step should try to scan a document with DocumentImageScan step
 - confirmConfig: DocumentConfirm.Config - config for a DocumentConfirm step
 - docImage: UIImage? - you can pass an image directly to this step as well
+- startNewSession: Bool - if you are scaning the same document, for example the back page of ID card, please set this to true
 
 **Output:**
 

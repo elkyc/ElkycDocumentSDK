@@ -33,6 +33,41 @@ ElkycDocumentSDK does not have any components but it is dependent on [ElkycCoreS
 - Xcode 11+
 - Swift 5.1+
 
+# Permissions
+## Camera
+
+This is achieved easily by adding the NSCameraUsageDescription key to the Info.plist along with usage description string. This usage string is displayed when the user is asked to allow access, so localization may be desired depending on your user base.
+
+## RFID
+
+Add the NFCReaderUsageDescription key as a string item to the Info.plist file.
+
+Also, com.apple.developer.nfc.readersession.iso7816.select-identifiers has to be added and a list of application identifiers has to be declared there which the app has to able to read according to ISO7816.
+
+To access a particular function of the electronic document or to a file in its memory, it is required to select the corresponding application first.
+Identifiers of all supported by Document Reader SDK standard applications are given below.
+
+- A0000002471001 corresponds to the ePassport application;
+- E80704007F00070302 corresponds to the eID application;
+- A000000167455349474E corresponds to the eSign application;
+- A0000002480100 correspond to the eDL application;
+- A0000002480200 correspond to the eDL application;
+- A0000002480300 correspond to the eDL application;
+- A00000045645444C2D3031 corresponds to the eDL application (Europe).
+
+```
+<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+	<array>
+		<string>A0000002471001</string>
+		<string>E80704007F00070302</string>
+		<string>A000000167455349474E</string>
+		<string>A0000002480100</string>
+		<string>A0000002480200</string>
+		<string>A0000002480300</string>
+		<string>A00000045645444C2D3031</string>
+	</array>
+```
+
 # Installation
 ## CocoaPods
 

@@ -222,7 +222,7 @@ Use this step if you want to visually take a picture of a document and confim it
 
 - documentMask: DocumentMask - you can set a mask for a scan process. We have a set of predefined masks as well you can set the custom one.
 - documentType: CaptureDocumentType - you can set a type of the document, mostly used internally
-- scanDocument: Bool - if step should try to scan a document with DocumentImageScan step
+- scanDocument: Bool - set to true if step should try to scan a document with DocumentImageScan step
 - confirmConfig: DocumentConfirm.Config - config for a DocumentConfirm step
 - docImage: UIImage? - you can pass an image directly to this step as well
 

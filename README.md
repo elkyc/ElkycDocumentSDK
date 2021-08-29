@@ -227,7 +227,7 @@ Use this step if you want to scan any document image.
 
 - image: UIImage - document image
 - validateResponse: Bool - If you set this property to true then step will validate DocumentResult, it will check if at least one document type is available
-- startNewSession: Bool - if you are scaning the same document, for example the back page of ID card, please set this to true
+- startNewSession: Bool - if you are scaning the same document, for example the back page of ID card, please set this to false
 
 **Output:**
 
@@ -239,7 +239,7 @@ Use this step if you want to visually scan a document.
 **Input:**
 
 - documentMask: DocumentMask - you can set a mask for a scan process. We have a set of predefined masks as well you can set the custom one.
-- startNewSession: Bool - if you are scaning the same document, for example the back page of ID card, please set this to true
+- startNewSession: Bool - if you are scaning the same document, for example the back page of ID card, please set this to false
 
 **Output:**
 
@@ -262,7 +262,7 @@ Use this step if you want to visually take a picture of a document and confim it
 - scanDocument: Bool - set to true if step should try to scan a document with DocumentImageScan step
 - confirmConfig: DocumentConfirm.Config - config for a DocumentConfirm step
 - docImage: UIImage? - you can pass an image directly to this step as well
-- startNewSession: Bool - if you are scaning the same document, for example the back page of ID card, please set this to true
+- startNewSession: Bool - if you are scaning the same document, for example the back page of ID card, please set this to false
 
 **Output:**
 

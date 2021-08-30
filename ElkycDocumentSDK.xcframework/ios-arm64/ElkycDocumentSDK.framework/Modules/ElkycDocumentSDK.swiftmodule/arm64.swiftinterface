@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ElkycDocumentSDK
 import DocumentReader
 import ElkycCoreSDK
@@ -101,8 +101,7 @@ public struct DocumentText : Swift.Encodable {
 }
 public class CaptureWithConfirm : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
-  public init(documentMask: ElkycDocumentSDK.DocumentMask, documentType: ElkycDocumentSDK.CaptureDocumentType, scanDocument: Swift.Bool, confirmConfig: ElkycCoreSDK.DocumentConfirm.Config = DocumentConfirm.Config())
-  public init(docImage: UIKit.UIImage?, scanDocument: Swift.Bool, confirmConfig: ElkycCoreSDK.DocumentConfirm.Config = DocumentConfirm.Config())
+  public init(documentMask: ElkycDocumentSDK.DocumentMask = .empty, documentType: ElkycDocumentSDK.CaptureDocumentType = .specific, scanDocument: Swift.Bool, docImage: UIKit.UIImage? = nil, startNewSession: Swift.Bool, confirmConfig: ElkycCoreSDK.DocumentConfirm.Config = DocumentConfirm.Config())
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.CaptureWithConfirm.StepResult, Swift.Error>) -> Swift.Void))
   public typealias Output = ElkycDocumentSDK.CaptureWithConfirm.StepResult
   @objc deinit
@@ -116,7 +115,7 @@ extension CaptureWithConfirm {
 }
 public class DocumentScan : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
-  public init(documentMask: ElkycDocumentSDK.DocumentMask = .empty)
+  public init(documentMask: ElkycDocumentSDK.DocumentMask = .empty, startNewSession: Swift.Bool = true)
   public func setDocumentTypes(_ types: [DocumentReader.DiDocType]) -> ElkycDocumentSDK.DocumentScan
   public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.DocumentScan
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
@@ -126,7 +125,7 @@ public class DocumentScan : ElkycCoreSDK.ElkycStep {
 }
 @_hasMissingDesignatedInitializers public class DocumentImageScan : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
-  public init(image: UIKit.UIImage, validateResponse: Swift.Bool = true)
+  public init(image: UIKit.UIImage, validateResponse: Swift.Bool = true, startNewSession: Swift.Bool = true)
   public func setDocumentTypes(_ types: [DocumentReader.DiDocType]) -> ElkycDocumentSDK.DocumentImageScan
   public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.DocumentImageScan
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))

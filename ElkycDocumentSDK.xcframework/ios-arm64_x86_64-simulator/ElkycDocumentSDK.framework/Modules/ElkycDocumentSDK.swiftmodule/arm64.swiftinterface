@@ -76,7 +76,6 @@ public class RfidDocumentScan : ElkycCoreSDK.ElkycStep {
   final public let opticalDocResult: ElkycDocumentSDK.DocumentResult
   public init(opticalDocResult: ElkycDocumentSDK.DocumentResult, attemptCount: Swift.Int = 3, config: ElkycDocumentSDK.RfidDocumentScan.Config = Config())
   public static func isAvailable() -> Swift.Bool
-  public func setDocumentTypes(_ types: [DocumentReader.DiDocType]) -> ElkycDocumentSDK.RfidDocumentScan
   public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.RfidDocumentScan
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
   public func startStep(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
@@ -116,7 +115,6 @@ extension CaptureWithConfirm {
 public class DocumentScan : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
   public init(documentMask: ElkycDocumentSDK.DocumentMask = .empty, startNewSession: Swift.Bool = true)
-  public func setDocumentTypes(_ types: [DocumentReader.DiDocType]) -> ElkycDocumentSDK.DocumentScan
   public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.DocumentScan
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
   public func startStep(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
@@ -126,7 +124,6 @@ public class DocumentScan : ElkycCoreSDK.ElkycStep {
 @_hasMissingDesignatedInitializers public class DocumentImageScan : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
   public init(image: UIKit.UIImage, validateResponse: Swift.Bool = true, startNewSession: Swift.Bool = true)
-  public func setDocumentTypes(_ types: [DocumentReader.DiDocType]) -> ElkycDocumentSDK.DocumentImageScan
   public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.DocumentImageScan
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
   public func startStep(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))

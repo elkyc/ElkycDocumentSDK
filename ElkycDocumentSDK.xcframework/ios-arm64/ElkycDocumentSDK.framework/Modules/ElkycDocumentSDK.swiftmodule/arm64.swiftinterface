@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ElkycDocumentSDK
 import DocumentReader
 import ElkycCoreSDK
@@ -8,6 +8,7 @@ import Foundation
 import Swift
 import UIKit
 import Vision
+import _Concurrency
 @_hasMissingDesignatedInitializers public class DocumentReader {
   public static func loadDatabase(progressHandler: ((Foundation.Progress) -> Swift.Void)?, completion: @escaping ((Swift.Bool, Swift.Error?) -> Swift.Void))
   @objc deinit
@@ -39,7 +40,7 @@ public class InnScanWithConfrim : ElkycCoreSDK.ElkycStep {
   public typealias Output = ElkycDocumentSDK.InnScanWithConfrim.StepResult
   @objc deinit
 }
-extension InnScanWithConfrim {
+extension ElkycDocumentSDK.InnScanWithConfrim {
   public struct StepResult {
     public let innScanResponse: ElkycDocumentSDK.InnDocumentScanResponse
     public let confirmResult: ElkycCoreSDK.DocumentConfirm.StepResult
@@ -82,7 +83,7 @@ public class RfidDocumentScan : ElkycCoreSDK.ElkycStep {
   public typealias Output = ElkycDocumentSDK.DocumentResult
   @objc deinit
 }
-extension RfidDocumentScan {
+extension ElkycDocumentSDK.RfidDocumentScan {
   public struct Config {
     public var retryBtnBackgroundColor: UIKit.UIColor
     public var retryBtnTintColor: UIKit.UIColor
@@ -105,7 +106,7 @@ public class CaptureWithConfirm : ElkycCoreSDK.ElkycStep {
   public typealias Output = ElkycDocumentSDK.CaptureWithConfirm.StepResult
   @objc deinit
 }
-extension CaptureWithConfirm {
+extension ElkycDocumentSDK.CaptureWithConfirm {
   public struct StepResult {
     public let captureResponse: ElkycDocumentSDK.CaptureResponse
     public let docResult: ElkycDocumentSDK.DocumentResult?
@@ -169,7 +170,7 @@ public class SelfieWithConfirm : ElkycCoreSDK.ElkycStep {
   public typealias Output = ElkycDocumentSDK.SelfieWithConfirm.StepResult
   @objc deinit
 }
-extension SelfieWithConfirm {
+extension ElkycDocumentSDK.SelfieWithConfirm {
   public struct StepResult {
     public let image: UIKit.UIImage
     public let confirmResult: ElkycCoreSDK.DocumentConfirm.StepResult
@@ -195,7 +196,7 @@ public class InnConfirm : ElkycCoreSDK.ElkycStep {
   public typealias Output = ElkycDocumentSDK.InnDocumentScanResponse
   @objc deinit
 }
-extension InnConfirm {
+extension ElkycDocumentSDK.InnConfirm {
   public struct Config {
     public var title: Swift.String
     public var empty_title: Swift.String

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "ElkycDocumentSDK"
-    s.version      = "1.1.5"
+    s.version      = "1.1.6"
     s.summary      = "Real-time identity verification & onboarding. We help banks, fintech’s and other businesses to increase the number of services they provide as well as attract new customers by automating the onboarding and verification process."
     s.description  = <<-DESC
     We provide a quick, secure and intuitive onboarding process of customers. To make it possible we offer a software which helps to identify and verify customers online in a comprehensive manner:

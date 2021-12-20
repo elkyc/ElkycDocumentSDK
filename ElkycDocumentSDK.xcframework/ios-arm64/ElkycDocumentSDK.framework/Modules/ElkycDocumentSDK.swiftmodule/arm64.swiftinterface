@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ElkycDocumentSDK
 import DocumentReader
 import ElkycCoreSDK
@@ -165,10 +165,16 @@ public enum DocumentMask : Swift.Equatable {
 }
 public class SelfieWithConfirm : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
-  public init()
+  public init(config: ElkycDocumentSDK.SelfieWithConfirm.Config = Config())
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.SelfieWithConfirm.StepResult, Swift.Error>) -> Swift.Void))
   public typealias Output = ElkycDocumentSDK.SelfieWithConfirm.StepResult
   @objc deinit
+}
+extension ElkycDocumentSDK.SelfieWithConfirm {
+  public struct Config {
+    public var documentConfirmConfig: ElkycCoreSDK.DocumentConfirm.Config
+    public init()
+  }
 }
 extension ElkycDocumentSDK.SelfieWithConfirm {
   public struct StepResult {

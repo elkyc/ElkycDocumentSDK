@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
     s.platform = :ios
     s.swift_version = "5.0"
     s.ios.deployment_target  = '11.0'
-    s.dependency 'DocumentReader', '5.7.2075'
-    s.dependency 'DocumentReaderFullRFID', '5.7.4876'
+    s.dependency 'DocumentReader', '6.2.2422'
+    s.dependency 'DocumentReaderFullRFID', '6.2.5964'
     s.dependency 'ElkycCoreSDK', "#{s.version}"
 end

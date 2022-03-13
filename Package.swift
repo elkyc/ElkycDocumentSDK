@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "ElkycDocumentSDK",
-            targets: ["ElkycDocumentSDK", "DocumentReader", "DocumentReaderFullRFID"]),
+            targets: ["ElkycDocumentSDK", "DocumentReader", "DocumentReaderCore"]),
     ],
     targets: [
         .binaryTarget(

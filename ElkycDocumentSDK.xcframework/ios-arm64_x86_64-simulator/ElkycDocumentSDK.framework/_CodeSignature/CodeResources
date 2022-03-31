@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		j4hgRQIymDlk422IWC08T3OcW+w=
+		waPG88A7b0kZ6bAQvkUmtTt0Ecw=
 		</data>
 		<key>Headers/ElkycDocumentSDK-Swift.h</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		/Epm5y00g0bqv5ooFTp7mQXdvYM=
+		JfWzekv6+IWPE/ycLPRJThocfIM=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Ztb359+5W53O5I6/BVfIY3SRd/M=
+		gB/xIEgcDCY9+UGd+fGVpqSJGw4=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		/Epm5y00g0bqv5ooFTp7mQXdvYM=
+		JfWzekv6+IWPE/ycLPRJThocfIM=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		Ztb359+5W53O5I6/BVfIY3SRd/M=
+		gB/xIEgcDCY9+UGd+fGVpqSJGw4=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		5g7UnkhG/PIxVtonFQCgv1AjYeY=
+		PXCAbFgXZGBv9mS63EXjZ1YQGqM=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ZR0/B/jy1tfRUIg5GWF4cxcuPIE=
+		OmiTdfYKiifa1Ac+Dqp98CW6tg8=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -74,11 +74,11 @@
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		5g7UnkhG/PIxVtonFQCgv1AjYeY=
+		PXCAbFgXZGBv9mS63EXjZ1YQGqM=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		ZR0/B/jy1tfRUIg5GWF4cxcuPIE=
+		OmiTdfYKiifa1Ac+Dqp98CW6tg8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -121,7 +121,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vo+Z8u87mVIi+guSA4BJPD10s3GZZB7NObOf9/NqBvE=
+			GQthnHSAjCHwWK9EBTVgv4z5N5PEPyXJB2CIJRJr8vc=
 			</data>
 		</dict>
 		<key>Headers/ElkycDocumentSDK-Swift.h</key>
@@ -170,14 +170,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rlvH+8ar1ozUjw/54GNZky708a/eut66Z5eY660Q8ww=
+			N0uhJU7caei3lAD7mzo7Jg8rbZSzoV2T5rJU+2e20Ds=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vjEphVjpU36ohNJEkc/Ask54YRskqOZ2Oart29ApZf8=
+			bbcoDsPVFcQNhMRFl5lG/EhwEwTzuMmcjzgCyAU9PIc=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/arm64.swiftdoc</key>
@@ -191,14 +191,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rlvH+8ar1ozUjw/54GNZky708a/eut66Z5eY660Q8ww=
+			N0uhJU7caei3lAD7mzo7Jg8rbZSzoV2T5rJU+2e20Ds=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vjEphVjpU36ohNJEkc/Ask54YRskqOZ2Oart29ApZf8=
+			bbcoDsPVFcQNhMRFl5lG/EhwEwTzuMmcjzgCyAU9PIc=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -212,14 +212,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f73VMZHcGzwEoCoYEXsW2Nz6XgYdDdhRJW61PeChaPc=
+			WST0Vmn2ZH7EbypwDhTUM65uFdPKlYquEix+U9PZow8=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tzTa3ZYE/qxOxX3kq1vUSNVH2F1EMFtJsyrmht3Fc8s=
+			Xc8bzEQsDXQMCJI/FJoYxk51h+WFiXzA9/8x3jxfFdA=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64.swiftdoc</key>
@@ -233,14 +233,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f73VMZHcGzwEoCoYEXsW2Nz6XgYdDdhRJW61PeChaPc=
+			WST0Vmn2ZH7EbypwDhTUM65uFdPKlYquEix+U9PZow8=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tzTa3ZYE/qxOxX3kq1vUSNVH2F1EMFtJsyrmht3Fc8s=
+			Xc8bzEQsDXQMCJI/FJoYxk51h+WFiXzA9/8x3jxfFdA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

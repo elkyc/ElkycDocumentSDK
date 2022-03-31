@@ -75,7 +75,7 @@ public struct DocumentResult : Swift.Encodable {
 public class RfidDocumentScan : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
   final public let opticalDocResult: ElkycDocumentSDK.DocumentResult
-  public init(opticalDocResult: ElkycDocumentSDK.DocumentResult, attemptCount: Swift.Int = 3, config: ElkycDocumentSDK.RfidDocumentScan.Config = Config())
+  public init(opticalDocResult: ElkycDocumentSDK.DocumentResult, attemptCount: Swift.Int = 3, config: ElkycDocumentSDK.RfidDocumentScan.Config = Config(), baseSMProcedure: DocumentReader.RFIDAccessControlProcedureType = RFIDAccessControlProcedureType.bac)
   public static func isAvailable() -> Swift.Bool
   public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.RfidDocumentScan
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))

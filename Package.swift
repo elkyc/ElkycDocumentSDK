@@ -1,8 +1,8 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let version = "1.2.8"
-let checksum = "e0a23872718e15916ecd8c50fae2e3e924487513edb39760effc199697bd05a9"
+let version = "1.2.9"
+let checksum = "1089b72e04bd81b27679701a4ff65041975b8a7407a3a13690d486769b19ca3f"
 
 let package = Package(
     name: "ElkycDocumentSDK",

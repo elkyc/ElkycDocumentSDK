@@ -18,11 +18,11 @@ let package = Package(
             checksum: checksum),
         .binaryTarget(
             name: "DocumentReader",
-            url: "https://pods.regulaforensics.com/DocumentReader/6.2.2422/DocumentReader-6.2.2422.zip",
+            url: "https://pods.regulaforensics.com/DocumentReader/6.2.2441/DocumentReader-6.2.2441.zip",
             checksum: "0ff526f7aecbc45241dcf04e546ab6ce4067f4b6b4e19b31bf20d4b033e9c4d3"),
         .binaryTarget(
             name: "DocumentReaderCore",
-            url: "https://pods.regulaforensics.com/FullRFID/6.2.5964/DocumentReaderCore_fullrfid_6.2.5964.zip",
+            url: "https://pods.regulaforensics.com/FullRFID/6.2.6022/DocumentReaderCore_fullrfid_6.2.6022.zip",
             checksum: "cea2aae81daa80d1171cc7ecc2d0dea486ed2c13b58ef7bb893a44ca87e59014")
     ]
 )

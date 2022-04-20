@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ElkycDocumentSDK
 import DocumentReader
 import ElkycCoreSDK
@@ -10,7 +10,7 @@ import UIKit
 import Vision
 import _Concurrency
 @_hasMissingDesignatedInitializers public class DocumentReader {
-  public static func loadDatabase(progressHandler: ((Foundation.Progress) -> Swift.Void)?, completion: @escaping ((Swift.Bool, Swift.Error?) -> Swift.Void))
+  public static func loadDatabase(databaseID: Swift.String = "Full", progressHandler: ((Foundation.Progress) -> Swift.Void)?, completion: @escaping ((Swift.Bool, Swift.Error?) -> Swift.Void))
   @objc deinit
 }
 public class CreditCardScan : ElkycCoreSDK.ElkycStep {

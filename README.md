@@ -111,7 +111,10 @@ Don't forget that framework depends on [ElkycCoreSDK](https://github.com/elkyc/E
 
 The whole process is going synchronously from the first to the last step. During the process, data will be sent to our or your backend. The process will stop if **any** of the steps will return an error.
 
-Before starting using library you should always check for database update. Use **DocumentReader** class for this.
+Before starting using library you should always check for database update. 
+If you don't want to download and update database you can add it manually to your project and skip this step.
+Use **DocumentReader** class for this.
+Note: you can pass a databaseID parameter if needed, by default DocumentReader downloading full database.
 ```swift
 DocumentReader.loadDatabase { progress in
     print("\(Float(progress.fractionCompleted))")

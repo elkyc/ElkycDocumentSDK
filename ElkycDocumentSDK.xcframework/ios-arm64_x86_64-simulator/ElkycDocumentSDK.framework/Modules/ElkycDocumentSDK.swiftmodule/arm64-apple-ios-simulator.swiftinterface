@@ -72,10 +72,25 @@ public struct DocumentResult : Swift.Encodable {
   public func portrait() -> UIKit.UIImage?
   public func encode(to encoder: Swift.Encoder) throws
 }
+public enum BaseSMProcedure {
+  case aa
+  case bac
+  case ca
+  case cardInfo
+  case pace
+  case ri
+  case ta
+  case undefined
+  public static func == (a: ElkycDocumentSDK.BaseSMProcedure, b: ElkycDocumentSDK.BaseSMProcedure) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public class RfidDocumentScan : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
   final public let opticalDocResult: ElkycDocumentSDK.DocumentResult
-  public init(opticalDocResult: ElkycDocumentSDK.DocumentResult, attemptCount: Swift.Int = 3, config: ElkycDocumentSDK.RfidDocumentScan.Config = Config(), baseSMProcedure: DocumentReader.RFIDAccessControlProcedureType = RFIDAccessControlProcedureType.bac)
+  public init(opticalDocResult: ElkycDocumentSDK.DocumentResult, attemptCount: Swift.Int = 3, config: ElkycDocumentSDK.RfidDocumentScan.Config = Config(), baseSMProcedure: ElkycDocumentSDK.BaseSMProcedure = .bac)
   public static func isAvailable() -> Swift.Bool
   public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.RfidDocumentScan
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
@@ -244,5 +259,7 @@ public class UkrPassportScan : ElkycCoreSDK.ElkycStep {
 extension ElkycDocumentSDK.DocumentResult.DocumentStepType : Swift.Equatable {}
 extension ElkycDocumentSDK.DocumentResult.DocumentStepType : Swift.Hashable {}
 extension ElkycDocumentSDK.DocumentResult.DocumentStepType : Swift.RawRepresentable {}
+extension ElkycDocumentSDK.BaseSMProcedure : Swift.Equatable {}
+extension ElkycDocumentSDK.BaseSMProcedure : Swift.Hashable {}
 extension ElkycDocumentSDK.CaptureDocumentType : Swift.Equatable {}
 extension ElkycDocumentSDK.CaptureDocumentType : Swift.Hashable {}

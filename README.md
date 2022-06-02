@@ -256,7 +256,25 @@ Use this step if you want to visually scan a document.
 **Input:**
 
 - documentMask: DocumentMask - you can set a mask for a scan process. We have a set of predefined masks as well you can set the custom one.
-- startNewSession: Bool - if you are scaning the same document, for example the back page of ID card, please set this to false
+- multipageProcessing: Bool - use the setting to process more than one page of a document for several iterations, f the multipage processing is enabled, the SDK processes the front side of the document, recognizes the document type and checks in the database how many pages should be available for this document type. If there are any child documents (second page, back side) for this document type, the multipage processing is triggered. This concerns scenarios that recognize document types. Default false,
+- multipageAnimationFrontImage: UIImage? - You can set a front image for the multipage animation. If not set, the default image is used
+- multipageAnimationBackImage: UIImage? - You can set a back image for the multipage animation. If not set, the default image is used,
+- multipageButtonBackgroundColor: UIColor? - Set the color for the Skip Page button background.
+- showSkipNextPageButton: Bool - Show/hide the Skip Page button. Default false,
+- cameraFrameDefaultColor: UIColor - Set the color for the document borders in the default state.
+- cameraFrameActiveColor: UIColor - Set the hex color code for the document border in the document detected state.
+- cameraFrameBorderWidth: CGFloat - Set the thickness of the document borders in the video preview.
+- cameraFrameCornerRadius: CGFloat - Change the corners' radius of the camera frame.
+- resultStatusTextFont: UIFont? - Set the text font for the current status.
+- resultStatusTextColor: UIColor - Set the color for the current text status
+- resultStatusBackgroundColor: UIColor - Set the color for the current text status background.
+- resultStatusPositionMultiplier: CGFloat - You can change the location of the result status message. For example, if you set the multiplier to 0.5 and the number of pixels by vertical is equal to 800, your message will be centralized and located at 200 px from top, that is (800 / 2) * 0.5 = 200 px. If the multiplier is equal to 1, the message will be centered. If the multiplier is equal to zero, the default location will be used.
+- doublePageSpread: Bool - Use the setting to process up to two pages of the document (a so-called "double-page spread") in one shot if they are presented on the frame (image).
+- filterDocumentIDList: [Int]? - Set the list of the document IDs to process. If left empty, all documents are processed.
+- showTorchButton: Bool - Show/hide the Torch icon.
+- torchButtonOnImage: UIImage? - Change the Torch icon for ON state
+- torchButtonOffImage: UIImage? - Change the Torch icon for OFF state
+- activityIndicatorColor: UIColor? - Set the color for the loading indicator(s).
 
 **Output:**
 

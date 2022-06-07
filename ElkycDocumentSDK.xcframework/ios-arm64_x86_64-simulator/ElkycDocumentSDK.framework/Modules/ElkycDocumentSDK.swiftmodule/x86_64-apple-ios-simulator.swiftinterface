@@ -116,7 +116,7 @@ public struct DocumentText : Swift.Encodable {
 }
 public class CaptureWithConfirm : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
-  public init(documentMask: ElkycDocumentSDK.DocumentMask = .empty, documentType: ElkycDocumentSDK.CaptureDocumentType = .specific, scanDocument: Swift.Bool, docImage: UIKit.UIImage? = nil, startNewSession: Swift.Bool, confirmConfig: ElkycCoreSDK.DocumentConfirm.Config = DocumentConfirm.Config())
+  public init(documentMask: ElkycDocumentSDK.DocumentMask = .empty, documentType: ElkycDocumentSDK.CaptureDocumentType = .specific, scanDocument: Swift.Bool, docImage: UIKit.UIImage? = nil, confirmConfig: ElkycCoreSDK.DocumentConfirm.Config = DocumentConfirm.Config())
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.CaptureWithConfirm.StepResult, Swift.Error>) -> Swift.Void))
   public typealias Output = ElkycDocumentSDK.CaptureWithConfirm.StepResult
   @objc deinit
@@ -130,7 +130,11 @@ extension ElkycDocumentSDK.CaptureWithConfirm {
 }
 public class DocumentScan : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
-  public init(documentMask: ElkycDocumentSDK.DocumentMask = .empty, startNewSession: Swift.Bool = true)
+  public init(documentMask: ElkycDocumentSDK.DocumentMask = .empty, multipageProcessing: Swift.Bool = false, multipageAnimationFrontImage: UIKit.UIImage? = nil, multipageAnimationBackImage: UIKit.UIImage? = nil, multipageButtonBackgroundColor: UIKit.UIColor? = .elkycMain, showSkipNextPageButton: Swift.Bool = false, cameraFrameDefaultColor: UIKit.UIColor = .clear, cameraFrameActiveColor: UIKit.UIColor = .elkycMain, cameraFrameBorderWidth: CoreGraphics.CGFloat = 3, cameraFrameCornerRadius: CoreGraphics.CGFloat = 10, resultStatusTextFont: UIKit.UIFont? = nil, resultStatusTextColor: UIKit.UIColor = .white, resultStatusBackgroundColor: UIKit.UIColor = .elkycMain, resultStatusPositionMultiplier: CoreGraphics.CGFloat = 0, doublePageSpread: Swift.Bool = false, filterDocumentIDList: [Swift.Int]? = nil, showTorchButton: Swift.Bool = true, torchButtonOnImage: UIKit.UIImage? = UIImage(named: "torch_on",
+                                                      in: Bundle(for: DocumentScan.self),
+                                                      compatibleWith: nil), torchButtonOffImage: UIKit.UIImage? = UIImage(named: "torch_off",
+                                                       in: Bundle(for: DocumentScan.self),
+                                                       compatibleWith: nil), activityIndicatorColor: UIKit.UIColor? = nil)
   public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.DocumentScan
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
   public func startStep(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
@@ -139,7 +143,7 @@ public class DocumentScan : ElkycCoreSDK.ElkycStep {
 }
 @_hasMissingDesignatedInitializers public class DocumentImageScan : ElkycCoreSDK.ElkycStep {
   public var stepId: ElkycCoreSDK.ElkycStepId
-  public init(image: UIKit.UIImage, validateResponse: Swift.Bool = true, startNewSession: Swift.Bool = true)
+  public init(image: UIKit.UIImage, validateResponse: Swift.Bool = true)
   public func setCountriesICAOCode(_ codes: [Swift.String]) -> ElkycDocumentSDK.DocumentImageScan
   public func start(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))
   public func startStep(from viewController: UIKit.UIViewController, completion: @escaping ((Swift.Result<ElkycDocumentSDK.DocumentResult, Swift.Error>) -> Swift.Void))

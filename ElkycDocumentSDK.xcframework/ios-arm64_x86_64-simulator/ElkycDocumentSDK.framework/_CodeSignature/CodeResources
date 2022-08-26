@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		x2+wlQ5GFp9vd/cK2VVn0op0wek=
+		0UyqTQdrMyj1A/Gr44XEdGjpKEY=
 		</data>
 		<key>Headers/ElkycDocumentSDK-Swift.h</key>
 		<data>
-		xzKhcZkelpjOxQ4PkSCMyl4FX58=
+		5ghPkq3yYRS2n+BQ+zZ/vaDNgG8=
 		</data>
 		<key>Headers/ElkycDocumentSDK.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		78sjqGeASq2HSqMlBNIDXC5lW40=
+		euY6j0NeWoufp6m4jBc1w9EvpzA=
 		</data>
 		<key>Inn.storyboardc/GLm-lS-9SV-view-KSi-OS-CRf.nib</key>
 		<data>
-		V8LMhuoszKGyCZrlCzqmP5zCZwo=
+		ZAV/jTQ1bj251pN3BafTePHlIZU=
 		</data>
 		<key>Inn.storyboardc/Info.plist</key>
 		<data>
@@ -34,27 +34,27 @@
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		MyYwHC9r+ky5s/1z1CUbQnj+zCs=
+		pJJBlvaMOssWdFryplQ1GG9iXX0=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		1t3HT2gsGUynZRKj7YWTPJCKqAs=
+		Cl94onGj/7ymHr8S+lJC9OnpArU=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Cg7ZswAgysnmem0eRpXvtDq2PLU=
+		Fu4Zz2EgoVq7tebvoLUL1mbpaDU=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		T2KkMyGskA77dXJyzDoNZ5toBuo=
+		t/R/APr3bixN670iSUSD3Qp4onI=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		+vHu9eILTBlBXXAeokvAAKMAlj8=
+		Pz+hPF86Folb7E9MUoDNUXzZZbg=
 		</data>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		N4KbErwQL+eIwTZ58L3bW1G4DD0=
+		aLXs8tvsjTLUfU5TopMcInuLGIA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Rfid.storyboardc/BC3-1g-70L-view-e4r-UL-G77.nib</key>
 		<data>
-		JmqEnJ6UJah26Z+w+01tWELifW8=
+		V89DZ3vcFgKVa3yjDViI+2eokFI=
 		</data>
 		<key>Rfid.storyboardc/Info.plist</key>
 		<data>
@@ -97,14 +97,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xMr3tUXfodRhyC/ZMZWockWnU9N+oYdsxRSJn6uM4+g=
+			2yc/D5t2OSX3L3U3QIXjjFr2LRliJRiueN3lVmfxNRI=
 			</data>
 		</dict>
 		<key>Headers/ElkycDocumentSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WQ/iB+BiId3pAsGzAKiyj+8lzzMaG9CmDoOye52Vs24=
+			xeNOvHN+qelQWKqqgHigl0Q2cTxdWhVNDPdnqgtDu1A=
 			</data>
 		</dict>
 		<key>Headers/ElkycDocumentSDK.h</key>
@@ -118,7 +118,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0rT6mf/bSsqvfAGKGRNMd9nuWwP3FD7P8fWSurhSpKw=
+			CDx4j6RsO/chF9Fj2sZRuSkeXv/yUhq2aTIii+P2ybw=
 			</data>
 		</dict>
 		<key>Inn.storyboardc/Info.plist</key>
@@ -139,42 +139,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			h18IMy+5MA3dY8Ft0YXFEHI9zk1K9Oew7Jt6fDhTjDo=
+			3//XmiNIQlA86uU5Ac8cmClHMMnu4ets68yUTKmPLZY=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			stQiV0IaYe8cEMw9pAHi1GsyYcxxVbyIyKFo/IaFvIM=
+			niVf0RzDG8ZSgN4GaGwrpuq7kugHsfXrHXYJZ5qaF1E=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			z7v8u8Ed57+1ka/QgmywZZjh+etE1Pp8p4tuM9JCExQ=
+			Kta3MnPPFQi+KD9fQqUl4K5FzAahZtlkdjxkQECSs9Y=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yHRJvGW/w0CK2DP9vd39slkHYDakuKHt/Z79LBjJdXU=
+			IeBgq+nl/qX6HQGfvHegjmPVSwt7pRj3i22ixMZpoVQ=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fcw9x1QqbXyy4h3hud4SQW6FTdPXu9KD3MpdVkEco9Q=
+			r8WX5DW5BWYSjB0b1VvBMqss+DIXnC7Zt4QXiLx2IyM=
 			</data>
 		</dict>
 		<key>Modules/ElkycDocumentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KSSRGrRwbn0y/Os3xOVblsMSjmiGqXvFNldCLsGHsKw=
+			24CCvKfnUxa2ouHkflalVyYyEBkj7x3PaV9mkeiNIrM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -188,7 +188,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J8XS3Qn8Z6fpHWT0nWIaA9Gg1CKpbTeKSxti8yuBsrI=
+			L3ckxLXHZG4Cywg5OTfJE49kt3BjXkc4lmrMW5WUmTw=
 			</data>
 		</dict>
 		<key>Rfid.storyboardc/Info.plist</key>

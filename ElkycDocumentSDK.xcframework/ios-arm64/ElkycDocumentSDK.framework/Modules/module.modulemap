@@ -6,6 +6,6 @@ framework module ElkycDocumentSDK {
 }
 
 module ElkycDocumentSDK.Swift {
-    header "ElkycDocumentSDK-Swift.h"
-    requires objc
+  header "ElkycDocumentSDK-Swift.h"
+  requires objc
 }

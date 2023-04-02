@@ -4159,7 +4159,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(documentMask:multipageProcessing:multipageAnimationFrontImage:multipageAnimationBackImage:multipageButtonBackgroundColor:showSkipNextPageButton:cameraFrameDefaultColor:cameraFrameActiveColor:cameraFrameBorderWidth:cameraFrameCornerRadius:resultStatusTextFont:resultStatusTextColor:resultStatusBackgroundColor:resultStatusPositionMultiplier:doublePageSpread:filterDocumentIDList:showTorchButton:torchButtonOnImage:torchButtonOffImage:activityIndicatorColor:)",
+            "printedName": "init(documentMask:validateResponse:multipageProcessing:multipageAnimationFrontImage:multipageAnimationBackImage:multipageButtonBackgroundColor:showSkipNextPageButton:cameraFrameDefaultColor:cameraFrameActiveColor:cameraFrameBorderWidth:cameraFrameCornerRadius:resultStatusTextFont:resultStatusTextColor:resultStatusBackgroundColor:resultStatusPositionMultiplier:doublePageSpread:filterDocumentIDList:showTorchButton:torchButtonOnImage:torchButtonOffImage:activityIndicatorColor:showCaptureButton:showCaptureButtonDelayFromStart:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4173,6 +4173,13 @@
                 "printedName": "ElkycDocumentSDK.DocumentMask",
                 "hasDefaultArg": true,
                 "usr": "s:16ElkycDocumentSDK0B4MaskO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               },
               {
                 "kind": "TypeNominal",
@@ -4378,11 +4385,25 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:16ElkycDocumentSDK0B4ScanC12documentMask19multipageProcessing0G19AnimationFrontImage0gi4BackK00G21ButtonBackgroundColor016showSkipNextPageM0018cameraFrameDefaultO00tu6ActiveO00tU11BorderWidth0tU12CornerRadius20resultStatusTextFont016resultStatusTextO0012resultStatusnO030resultStatusPositionMultiplier06doubleS6Spread06filterB6IDList0p5TorchM005torchm2OnK005torchm3OffK0017activityIndicatorO0AcA0bF0O_SbSo7UIImageCSgA0_So7UIColorCSgSbA2_A2_14CoreFoundation7CGFloatVA6_So6UIFontCSgA2_A2_A6_SbSaySiGSgSbA0_A0_A3_tcfc",
-            "mangledName": "$s16ElkycDocumentSDK0B4ScanC12documentMask19multipageProcessing0G19AnimationFrontImage0gi4BackK00G21ButtonBackgroundColor016showSkipNextPageM0018cameraFrameDefaultO00tu6ActiveO00tU11BorderWidth0tU12CornerRadius20resultStatusTextFont016resultStatusTextO0012resultStatusnO030resultStatusPositionMultiplier06doubleS6Spread06filterB6IDList0p5TorchM005torchm2OnK005torchm3OffK0017activityIndicatorO0AcA0bF0O_SbSo7UIImageCSgA0_So7UIColorCSgSbA2_A2_12CoreGraphics7CGFloatVA6_So6UIFontCSgA2_A2_A6_SbSaySiGSgSbA0_A0_A3_tcfc",
+            "usr": "s:16ElkycDocumentSDK0B4ScanC12documentMask16validateResponse19multipageProcessing0I19AnimationFrontImage0ik4BackM00I21ButtonBackgroundColor016showSkipNextPageO0018cameraFrameDefaultQ00vw6ActiveQ00vW11BorderWidth0vW12CornerRadius20resultStatusTextFont016resultStatusTextQ0012resultStatuspQ030resultStatusPositionMultiplier06doubleU6Spread06filterB6IDList0r5TorchO005torcho2OnM005torcho3OffM0017activityIndicatorQ00r7CaptureO00r7CaptureO14DelayFromStartAcA0bF0O_S2bSo7UIImageCSgA3_So7UIColorCSgSbA5_A5_14CoreFoundation7CGFloatVA9_So6UIFontCSgA5_A5_A9_SbSaySiGSgSbA3_A3_A6_SbSdtcfc",
+            "mangledName": "$s16ElkycDocumentSDK0B4ScanC12documentMask16validateResponse19multipageProcessing0I19AnimationFrontImage0ik4BackM00I21ButtonBackgroundColor016showSkipNextPageO0018cameraFrameDefaultQ00vw6ActiveQ00vW11BorderWidth0vW12CornerRadius20resultStatusTextFont016resultStatusTextQ0012resultStatuspQ030resultStatusPositionMultiplier06doubleU6Spread06filterB6IDList0r5TorchO005torcho2OnM005torcho3OffM0017activityIndicatorQ00r7CaptureO00r7CaptureO14DelayFromStartAcA0bF0O_S2bSo7UIImageCSgA3_So7UIColorCSgSbA5_A5_12CoreGraphics7CGFloatVA9_So6UIFontCSgA5_A5_A9_SbSaySiGSgSbA3_A3_A6_SbSdtcfc",
             "moduleName": "ElkycDocumentSDK",
             "declAttributes": [
               "AccessControl"
@@ -8694,252 +8715,273 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/DocumentReader.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/DocumentReader.swift",
       "kind": "StringLiteral",
       "offset": 250,
       "length": 27,
       "value": "\"ElkycDocumentSDK_Keychain\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/DocumentReader.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/DocumentReader.swift",
       "kind": "StringLiteral",
       "offset": 448,
       "length": 6,
       "value": "\"Full\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/CreditCardScan.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/CreditCardScan.swift",
       "kind": "BooleanLiteral",
       "offset": 395,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/BarcodeScan.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/BarcodeScan.swift",
       "kind": "BooleanLiteral",
       "offset": 1051,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
       "kind": "StringLiteral",
       "offset": 236,
       "length": 18,
       "value": "\"DOCUMENT_CAPTURE\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
       "kind": "StringLiteral",
       "offset": 283,
       "length": 23,
       "value": "\"RFID_DOCUMENT_CAPTURE\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
       "kind": "StringLiteral",
       "offset": 330,
       "length": 17,
       "value": "\"BARCODE_CAPTURE\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
       "kind": "StringLiteral",
       "offset": 374,
       "length": 21,
       "value": "\"CREDIT_CARD_CAPTURE\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
       "kind": "StringLiteral",
       "offset": 236,
       "length": 18,
       "value": "\"DOCUMENT_CAPTURE\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
       "kind": "StringLiteral",
       "offset": 283,
       "length": 23,
       "value": "\"RFID_DOCUMENT_CAPTURE\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
       "kind": "StringLiteral",
       "offset": 330,
       "length": 17,
       "value": "\"BARCODE_CAPTURE\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Models\/DocumentResult.swift",
       "kind": "StringLiteral",
       "offset": 374,
       "length": 21,
       "value": "\"CREDIT_CARD_CAPTURE\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/RfidDocumentScan.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/RfidDocumentScan.swift",
       "kind": "Array",
       "offset": 831,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/RfidDocumentScan.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/RfidDocumentScan.swift",
       "kind": "Array",
       "offset": 871,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/RfidDocumentScan.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/RfidDocumentScan.swift",
       "kind": "IntegerLiteral",
       "offset": 1131,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Inn\/InnConfirmViewController.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Inn\/InnConfirmViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 805,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
       "kind": "Array",
       "offset": 216,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
       "kind": "Array",
       "offset": 256,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
       "kind": "BooleanLiteral",
-      "offset": 426,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
-      "kind": "BooleanLiteral",
-      "offset": 674,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
-      "kind": "IntegerLiteral",
-      "offset": 852,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
-      "kind": "IntegerLiteral",
-      "offset": 906,
-      "length": 2,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1145,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1189,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1288,
+      "offset": 459,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
+      "kind": "BooleanLiteral",
+      "offset": 509,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
+      "kind": "BooleanLiteral",
+      "offset": 757,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
+      "kind": "IntegerLiteral",
+      "offset": 935,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
+      "kind": "IntegerLiteral",
+      "offset": 989,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1228,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1272,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1371,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
       "kind": "StringLiteral",
-      "offset": 1356,
+      "offset": 1439,
       "length": 10,
       "value": "\"torch_on\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
       "kind": "StringLiteral",
-      "offset": 1597,
+      "offset": 1680,
       "length": 11,
       "value": "\"torch_off\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentImageScan.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1962,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentScan.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2033,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentImageScan.swift",
       "kind": "Array",
       "offset": 214,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentImageScan.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentImageScan.swift",
       "kind": "Array",
       "offset": 254,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentImageScan.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/DocumentImageScan.swift",
       "kind": "BooleanLiteral",
       "offset": 466,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/RFID\/RfidViewController.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/RFID\/RfidViewController.swift",
       "kind": "StringLiteral",
       "offset": 740,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/RFID\/RfidViewController.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/RFID\/RfidViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 766,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/SelfieWithConfirm.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/SelfieWithConfirm.swift",
       "kind": "StringLiteral",
       "offset": 2249,
       "length": 13,
       "value": "\"button_next\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/InnConfirm.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/InnConfirm.swift",
       "kind": "StringLiteral",
       "offset": 1871,
       "length": 19,
       "value": "\"inn_confirm_title\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/InnConfirm.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/InnConfirm.swift",
       "kind": "StringLiteral",
       "offset": 1944,
       "length": 25,
       "value": "\"inn_confirm_title_empty\""
     },
     {
-      "filePath": "\/Users\/alexgurin\/Documents\/Projects\/Elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/InnConfirm.swift",
+      "filePath": "\/Users\/chausov\/Developer\/elkyc\/elkycSDK\/ElkycDocumentSDK\/Steps\/InnConfirm.swift",
       "kind": "StringLiteral",
       "offset": 2150,
       "length": 20,

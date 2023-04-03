@@ -255,6 +255,7 @@ Use this step if you want to visually scan a document.
 **Input:**
 
 - documentMask: DocumentMask - you can set a mask for a scan process. We have a set of predefined masks as well you can set the custom one.
+- validateResponse: Bool - If you set this property to `true` then step will validate `DocumentResult`, it will check if Document processing finished correctly.
 - multipageProcessing: Bool - use the setting to process more than one page of a document for several iterations, f the multipage processing is enabled, the SDK processes the front side of the document, recognizes the document type and checks in the database how many pages should be available for this document type. If there are any child documents (second page, back side) for this document type, the multipage processing is triggered. This concerns scenarios that recognize document types. Default false,
 - multipageAnimationFrontImage: UIImage? - You can set a front image for the multipage animation. If not set, the default image is used
 - multipageAnimationBackImage: UIImage? - You can set a back image for the multipage animation. If not set, the default image is used,
@@ -274,6 +275,8 @@ Use this step if you want to visually scan a document.
 - torchButtonOnImage: UIImage? - Change the Torch icon for ON state
 - torchButtonOffImage: UIImage? - Change the Torch icon for OFF state
 - activityIndicatorColor: UIColor? - Set the color for the loading indicator(s).
+- showCaptureButton: Bool - Show/hide the Photo Capture button. Tapping the Capture button enables taking a picture and processing it as a single frame.
+- showCaptureButtonDelayFromStart: TimeInterval - Set a time interval between the scanning process start and the Capture button appearance. By default, it is 10 seconds.
 
 **Output:**
 

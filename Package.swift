@@ -2,7 +2,7 @@
 import PackageDescription
 
 let version = "2.2.0"
-let checksum = "3ec24b436a110941bb2f0863675ea6e01f1872ec85881ab8be99468784ab4203"
+let checksum = "e82d64274284c6f01539fc2732276f60b6584b05a060d85df526d76df0bcd202"
 
 let package = Package(
     name: "ElkycDocumentSDK",
